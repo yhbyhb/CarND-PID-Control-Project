@@ -16,9 +16,9 @@ In this project, we are trying to calculate steering angle with `CTE`(cross trac
 
  - `P` : `P` stands for `proportional`. `P` controller steers vehicle `proportionally` with distance between vehicle and center line rather than fixed amount of angle. But, only with `P` component the vehicle can be crooked when it reaches reference trajectory and repeatedly overshoot the desired trajectory and does not follow it.
 
- - `D` : To correct overshoot problem of `P` controller, using rate of `CTE` is the simple solution. In other word, using how car approaches fast or slowly to desired trajectory. By adding 'D'(derivative) component to error measurement, we can make vehicle avoid overshoot.
+ - `D` : To correct overshoot problem of `P` controller, using rate of `CTE` is the simple solution. In other word, using how car approaches fast or slowly to desired trajectory. By adding `D`(derivative) component to error measurement, we can make vehicle avoid overshoot.
 
- - `I` : When car's alignment is not right, certain amount of steering is needed to compensate mis-alignment. In that situation, steering angle 0 can't minimize `CTE` or can't follow the reference line indefinitely. To avoid that situation, `I`(integral) component which is accumulation of `CTE` over time is used for updating error measurement. 'I' indicate if the vehicle spending more time on one side of the trajectory or the other.
+ - `I` : When car's alignment is not right, certain amount of steering is needed to compensate mis-alignment. In that situation, steering angle 0 can't minimize `CTE` or can't follow the reference line indefinitely. To avoid that situation, `I`(integral) component which is accumulation of `CTE` over time is used for updating error measurement. `I` indicate if the vehicle spending more time on one side of the trajectory or the other.
 
 ### Final hyperparameters
 
